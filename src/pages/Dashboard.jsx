@@ -1,30 +1,30 @@
 import { useEffect, useState } from "react"
-import { index } from '../services/user'
+import { index } from '../services/habits'
 
 const Dashboard = (props) => {
 
-    const [allUsers, setAllUsers] = useState([])
+    const [allHabits, setAllHabits] = useState([])
 
     useEffect(() => {
-        const fetchUsers = async () => {
-            const usersData =  await index()
-            setAllUsers(usersData)
+        const fetchHabits = async () => {
+            const habitsData =  await index()
+            setAllHabits(habitsData)
         }
-        fetchUsers()
+        fetchHabits()
         
     }, [])
 
     return (
         <section>
             <header>
-                <h1>Welcome {props.user.username}!</h1>
-                <h2>View All the Users</h2>
+                <h1>Let's build healthy habits, {props.user.username}!</h1>
+                <h2>Your Habits</h2>
             </header>
-            {allUsers.map((user) => (
-                <div className="card">
+            {allHabits.map((habit) => (
+                <div className="card" key={habit._id}>
                     <header>
                         <h1>
-                        {user.username}
+                        {habit.title}
                         </h1>
                     </header>
                 </div>
