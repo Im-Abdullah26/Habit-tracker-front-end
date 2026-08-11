@@ -27,6 +27,7 @@ const App = () => {
         <Route path='/' element={user ? <Dashboard user={user} /> : <Landing />} />
         <Route path='/sign-up' element={<SignUpForm setUser={setUser} />} />
         <Route path='/sign-in' element={<SignInForm setUser={setUser} />} />
+        <Route path='/habits/new' element={<h1>New Habit</h1>}/>
       </Routes>
       </main>
     </div>
