@@ -1,12 +1,13 @@
 import Nav from "./components/Nav"
 import SignUpForm from "./pages/SignUpForm"
 import './App.css'
-import { Routes, Route } from "react-router"
+import { Routes, Route, useNavigate } from "react-router"
 import { useState, useEffect } from "react"
 import SignInForm from "./pages/SignInForm"
 import Landing from "./pages/Landing"
 import Dashboard from "./pages/Dashboard"
 import * as categoriesService from './services/categories'
+import * as habitsService from './services/habits'
 import HabitForm from "./pages/HabitForm"
 
 const getUserFromToken = () => {
@@ -21,6 +22,7 @@ const App = () => {
 
   const [user, setUser] = useState(getUserFromToken())
   const [categories, setCategories] = useState([])
+  const navigate = useNavigate()
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -29,6 +31,11 @@ const App = () => {
     }
     if (user) fetchCategories()
   }, [user])
+
+const handleAddHabit = async (formData) => {
+const newHabit = await habitsService.create(formData)
+  navigate('/')
+}
   
   return (
     <div>
@@ -38,7 +45,7 @@ const App = () => {
         <Route path='/' element={user ? <Dashboard user={user} /> : <Landing />} />
         <Route path='/sign-up' element={<SignUpForm setUser={setUser} />} />
         <Route path='/sign-in' element={<SignInForm setUser={setUser} />} />
-        <Route path='/habits/new' element={<HabitForm categories={categories} />}/>
+        <Route path='/habits/new' element={<HabitForm categories={categories} handleAddHabit={handleAddHabit} />}/>
       </Routes>
       </main>
     </div>
