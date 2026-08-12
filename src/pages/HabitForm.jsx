@@ -40,6 +40,22 @@ return (
   value={formData.title}
   onChange={handleChange}
 />
+<label htmlFor='category-input'>Category</label>
+<select
+  required
+  name='category'
+  id='category-input'
+  value={formData.category}
+  onChange={handleChange}
+>
+<option value='News'>News</option>
+<option value='Sports'>Sports</option>
+<option value='Games'>Games</option>
+<option value='Movies'>Movies</option>
+<option value='Music'>Music</option>
+<option value='Television'>Television</option>
+<option value='Other'>Other</option>
+</select>
 
 </form>
 </main>
