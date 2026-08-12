@@ -10,12 +10,12 @@ const Nav = (props) => {
 
     return (
         <nav>
-            <Link className="nav-brand" to="/">Habit Tracker</Link>
-            { props.user ? (
+<Link className="nav-brand" to="/">
+    <img src="/logo.png" alt="Habitum logo" className="nav-logo" />
+    Habitum
+</Link>            { props.user ? (
                 <ul>
-                    {/* <li>Welcome 😁 
-                        {props.user.username}
-                        </li> */}
+
                     <li>
                         <Link to="/">Dashboard</Link>
                     </li>
@@ -24,7 +24,7 @@ const Nav = (props) => {
                     </li>
                     
                     <li>
-                        <Link to="/categories/new">New category</Link>
+                        <Link to="/categories/new">New Category</Link>
                     </li>
                     
                     <li>

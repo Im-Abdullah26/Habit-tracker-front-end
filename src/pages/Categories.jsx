@@ -14,6 +14,7 @@ const Categories = (props) => {
     <Link className="Edit" to="/categories/new">Create a category</Link>
 </div>
 )}
+<div className="card-grid">
 {categories.map((category) => (
     <div className="card" key={category._id}>
     <header>
@@ -26,6 +27,7 @@ onClick={() => handleDeleteCategory(category._id)}>
 Delete</button>
 </div>
       ))}
+      </div>
 </section>
   )
 }

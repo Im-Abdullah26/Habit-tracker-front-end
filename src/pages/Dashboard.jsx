@@ -26,14 +26,15 @@ const handleComplete = async (habit) => {
 }
 
     return (
-        <section>
+        <section className="page-section">
             <header>
                 <h1>Let's build healthy habits, {props.user.username}!</h1>
                 <h2>Your Habits</h2>
             </header>
+            <div className="card-grid">
             {allHabits.map((habit) => (
-                <div className="card" key={habit._id}>
-                    <header>
+                <div className={`card ${habit.completed ? 'card-completed' : ''}`} key={habit._id}>
+                    <header className="habit-header">
                         <input className="checkbox"
   type='checkbox'
   checked={habit.completed}
@@ -42,17 +43,19 @@ const handleComplete = async (habit) => {
                         <h1 className="categoryh1">
                         {habit.title}
                         </h1>
-
+<hr/>
                         <p className="p1" style={{ backgroundColor: habit.category.color }}>
                         {habit.category.name}
                         </p>
 
                     </header>
+                    
                     <Link className="Edit" to={`/habits/${habit._id}/edit`}>Edit</Link> {' '}
                     <button className="deleteButton" onClick={() => handleDeleteHabit(habit._id)}>Delete</button>
-
+                    
                 </div>
             ))}
+            </div>
         </section>
     )
 }

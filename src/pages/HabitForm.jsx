@@ -40,7 +40,7 @@ useEffect(() => {
 
 return (
  <main className='card'>
-    <h1>{habitId ? 'Edit Habit' : 'New Habit'}</h1>
+    <h2>{habitId ? 'Edit Habit' : 'New Habit'}</h2>
     <form onSubmit={handleSubmit}>
 <label htmlFor='title-input'>Title</label>
 <input

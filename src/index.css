@@ -3,16 +3,22 @@
 :root {
   font-family: "Google Sans Flex", sans-serif;
 
-  --color-primary: #4f46e5;
-  --color-primary-dark: #4338ca;
-  --color-primary-soft: #e0e7ff;
+  --color-primary: #2f9e6e;
+  --color-primary-dark: #24805a;
+  --color-primary-soft: #d9f2e3;
   --color-success: #15803d;
   --color-text: #1f2937;
   --color-text-light: #6b7280;
-  --color-background: #f4f6f8;
+  --color-background: #f4f9f6;
   --color-surface: #ffffff;
-  --color-border: #d1d5db;
+  --color-border: #dbe7e1;
   --color-error: #dc2626;
+  --color-error-dark: #b91c1c;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --shadow-soft: 0 4px 16px rgba(47, 158, 110, 0.10);
 }
 
 * {
@@ -22,14 +28,19 @@
 body {
   min-height: 100vh;
   margin: 0;
-  /* background-color: var(--color-background); */
-  background: #E0E7FF;
-  background-color: #c8ebd8;
+  background-color: var(--color-background);
   color: var(--color-text);
+  line-height: 1.5;
 }
 
 button {
   cursor: pointer;
+  font-family: inherit;
+  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+}
+
+button:active {
+  transform: scale(0.98);
 }
 
 a {

@@ -20,6 +20,7 @@ return (
 
 <main className='card'>
     <form onSubmit={handleSubmit}>
+    <h2>Create Category</h2>
     <label htmlFor='name-input'>Name</label>
 <input
     required
