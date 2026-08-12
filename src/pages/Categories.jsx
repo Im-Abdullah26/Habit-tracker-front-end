@@ -21,6 +21,9 @@ const Categories = (props) => {
     <p className="p1" style={{ backgroundColor: category.color }}>
     {category.color}</p>
 </header>
+<button className="deleteButton"
+onClick={() => handleDeleteCategory(category._id)}> 
+Delete</button>
 </div>
       ))}
 </section>
