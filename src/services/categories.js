@@ -19,7 +19,7 @@ const create = async (CategoryFormData) => {
         Authorization: `Bearer ${localStorage.getItem('token')}`,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(habitFormData),
+      body: JSON.stringify(CategoryFormData),
     })
     return res.json()
   } catch (error) {
