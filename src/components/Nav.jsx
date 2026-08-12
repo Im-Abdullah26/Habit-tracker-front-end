@@ -22,9 +22,16 @@ const Nav = (props) => {
                     <li>
                         <Link to="/habits/new">New habit</Link>
                     </li>
+                    
+                    <li>
+                        <Link to="/categories/new">New category</Link>
+                    </li>
+                    
                     <li>
                         <Link to="/" onClick={handleSignOut}>Sign Out</Link>
                     </li>
+
+
                 </ul>
             ) : (
             <ul>
