@@ -11,7 +11,7 @@ const Categories = (props) => {
  {categories.length === 0 && (
   <div className="card">
     <p>You don't have any categories yet.</p>
-    <Link className="Edit" to="/categories/new">Create your first category</Link>
+    <Link className="Edit" to="/categories/new">Create a category</Link>
 </div>
 )}
 {categories.map((category) => (

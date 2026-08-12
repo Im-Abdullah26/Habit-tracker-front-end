@@ -28,6 +28,10 @@ const Nav = (props) => {
                     </li>
                     
                     <li>
+                        <Link to="/categories">Categories</Link>
+                    </li>
+
+                    <li>
                         <Link to="/" onClick={handleSignOut}>Sign Out</Link>
                     </li>
 
