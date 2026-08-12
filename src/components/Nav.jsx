@@ -13,9 +13,9 @@ const Nav = (props) => {
             <Link className="nav-brand" to="/">Habit Tracker</Link>
             { props.user ? (
                 <ul>
-                    <li>Welcome 😁 
-                        {/* {props.user.username} */}
-                        </li>
+                    {/* <li>Welcome 😁 
+                        {props.user.username}
+                        </li> */}
                     <li>
                         <Link to="/">Dashboard</Link>
                     </li>
