@@ -1,16 +1,30 @@
-# React + Vite
+<img width="1911" height="871" alt="image" src="https://github.com/user-attachments/assets/da574ef6-1955-460f-a376-a1fbc54d05e6" />
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# Habitum
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Habitum is a simple, calm habit-tracking web app. It helps you build daily routines by letting you create habits, organize them into color-coded categories, and check them off as you complete them each day.
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Deployed app:** <link to deployed app>
+- **Planning materials:** <link[ to Trello board / wireframes / ERD](https://trello.com/b/mcE6uUHA)>
+- **Back-end repository:** <link[ to back-end GitHub repo](https://github.com/Im-Abdullah26/Habit-tracker-back-end)>
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- React Router
+- Vite
+- JavaScript (ES6+)
+- CSS (custom, no framework)
+- JWT-based authentication (via back-end API)
+
+## Next Steps
+
+- Edit and delete individual habits' categories
+- Habit streak tracking and history
+- Filter/sort habits by category
+- Custom color picker for categories instead of manual
+
+
