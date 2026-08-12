@@ -10,6 +10,7 @@ import * as categoriesService from './services/categories'
 import * as habitsService from './services/habits'
 import HabitForm from "./pages/HabitForm"
 import CategoryForm from "./pages/CategoryForm"
+import Categories from "./pages/Categories"
 
 const getUserFromToken = () => {
   const token = localStorage.getItem('token')
@@ -48,7 +49,12 @@ const handleUpdateHabit = async (habitId, formData) => {
   const updatedHabit = await habitsService.update(habitId, formData)
   navigate('/')
 }
-  
+
+const handleDeleteCategory = async (categoryId) => {
+  const deletedCategory = await categoriesService.deleteCategory(categoryId)
+  setCategories(categories.filter((category) => category._id !== deletedCategory._id))
+}
+
   return (
     <div>
       <Nav user={user} setUser={setUser} />
