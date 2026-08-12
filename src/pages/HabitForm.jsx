@@ -48,14 +48,11 @@ return (
   value={formData.category}
   onChange={handleChange}
 >
-<option value='News'>News</option>
-<option value='Sports'>Sports</option>
-<option value='Games'>Games</option>
-<option value='Movies'>Movies</option>
-<option value='Music'>Music</option>
-<option value='Television'>Television</option>
-<option value='Other'>Other</option>
+{props.categories.map((category) => (
+    <option>{category.name}</option>
+))}
 </select>
+
 
 </form>
 </main>
