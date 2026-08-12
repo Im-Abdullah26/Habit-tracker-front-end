@@ -43,6 +43,11 @@ const handleAddCategory = async (formData) => {
   setCategories([newCategory, ...categories])
   navigate('/habits/new')
 }
+
+const handleUpdateHabit = async (habitId, formData) => {
+  const updatedHabit = await habitsService.update(habitId, formData)
+  navigate('/')
+}
   
   return (
     <div>
