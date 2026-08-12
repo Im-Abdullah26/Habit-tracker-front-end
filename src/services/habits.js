@@ -41,9 +41,26 @@ const deleteHabit = async (habitId) => {
   }
 }
 
+const update = async (habitId, habitFormData) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${habitId}`, {
+      method: 'PUT',
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(habitFormData),
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export {
   index,
   create,
   deleteHabit,
-  
+  update,
+
 }
