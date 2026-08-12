@@ -29,6 +29,6 @@ const create = async (CategoryFormData) => {
 
 export {
   index,
-  CategoryFormData,
+  create,
   
 }
