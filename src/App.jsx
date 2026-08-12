@@ -65,7 +65,8 @@ const handleDeleteCategory = async (categoryId) => {
         <Route path='/sign-in' element={<SignInForm setUser={setUser} />} />
         <Route path='/habits/new' element={<HabitForm categories={categories} handleAddHabit={handleAddHabit} />}/>
         <Route path='/categories/new' element={<CategoryForm handleAddCategory={handleAddCategory} />}/>  
-        <Route path="/habits/:habitId/edit" element={<HabitForm categories={categories} handleUpdateHabit={handleUpdateHabit} />}/>     
+        <Route path="/habits/:habitId/edit" element={<HabitForm categories={categories} handleUpdateHabit={handleUpdateHabit} />}/>
+        <Route path='/categories' element={<Categories categories={categories} handleDeleteCategory={handleDeleteCategory} />}/>     
       </Routes>
       </main>
     </div>
