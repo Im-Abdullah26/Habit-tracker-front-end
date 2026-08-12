@@ -9,6 +9,7 @@ import Dashboard from "./pages/Dashboard"
 import * as categoriesService from './services/categories'
 import * as habitsService from './services/habits'
 import HabitForm from "./pages/HabitForm"
+import CategoryForm from "./pages/CategoryForm"
 
 const getUserFromToken = () => {
   const token = localStorage.getItem('token')
@@ -36,6 +37,12 @@ const handleAddHabit = async (formData) => {
 const newHabit = await habitsService.create(formData)
   navigate('/')
 }
+
+const handleAddCategory = async (formData) => {
+  const newCategory = await categoriesService.create(formData)
+  setCategories([newCategory, ...categories])
+  navigate('/habits/new')
+}
   
   return (
     <div>
@@ -46,7 +53,7 @@ const newHabit = await habitsService.create(formData)
         <Route path='/sign-up' element={<SignUpForm setUser={setUser} />} />
         <Route path='/sign-in' element={<SignInForm setUser={setUser} />} />
         <Route path='/habits/new' element={<HabitForm categories={categories} handleAddHabit={handleAddHabit} />}/>
-        <Route path='/categories/new' element={ <h1>new category</h1>}/>
+        <Route path='/categories/new' element={<CategoryForm handleAddCategory={handleAddCategory} />}/>       
       </Routes>
       </main>
     </div>
