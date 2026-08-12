@@ -27,8 +27,20 @@ const create = async (CategoryFormData) => {
   }
 }
 
+const deleteCategory = async (categoryId) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${categoryId}`, {
+      method: 'DELETE',
+      headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export {
   index,
   create,
-  
+  deleteCategory,
 }
