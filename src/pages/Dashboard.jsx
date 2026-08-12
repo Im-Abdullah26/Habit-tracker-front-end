@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { index, deleteHabit } from '../services/habits'
+import { Link } from "react-router"
 
 const Dashboard = (props) => {
 
@@ -32,7 +33,9 @@ const handleDeleteHabit = async (habitId) => {
                         {habit.title}
                         </h1>
                     </header>
+                    <Link to={`/habits/${habit._id}/edit`}>Edit</Link>
                     <button onClick={() => handleDeleteHabit(habit._id)}>Delete</button>
+
                 </div>
             ))}
         </section>
