@@ -46,6 +46,7 @@ const newHabit = await habitsService.create(formData)
         <Route path='/sign-up' element={<SignUpForm setUser={setUser} />} />
         <Route path='/sign-in' element={<SignInForm setUser={setUser} />} />
         <Route path='/habits/new' element={<HabitForm categories={categories} handleAddHabit={handleAddHabit} />}/>
+        <Route path='/categories/new' element={ <h1>new category</h1>}/>
       </Routes>
       </main>
     </div>
