@@ -7,6 +7,9 @@ const CategoryForm = (props)=>{
     }
 const [formData, setFormData] = useState(initialState)
 
+const handleChange = (event) => {
+  setFormData({ ...formData, [event.target.name]: event.target.value })
+}
 
 const handleSubmit = (event) => {
     event.preventDefault()
