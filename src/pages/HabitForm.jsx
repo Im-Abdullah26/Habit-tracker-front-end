@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react'
-import { index } from '../services/categories'
+import { useState } from 'react'
 
 const HabitForm = (props) => {
   const initialState = {
@@ -7,16 +6,7 @@ const HabitForm = (props) => {
     category: '',
   }
 const [formData, setFormData] = useState(initialState)
-const [categories, setCategories] = useState([])
 
- useEffect(() => {
-    const fetchCategories = async () => {
-    const categoriesData =  await index()
-        setCategories(categoriesData)
-}
-fetchCategories()
-        
-}, [])
 
 
 const handleChange = (event) => {
@@ -48,8 +38,11 @@ return (
   value={formData.category}
   onChange={handleChange}
 >
+
+<option value=''>Select a category</option>
+
 {props.categories.map((category) => (
-    <option>{category.name}</option>
+    <option key={category._id} value={category._id}>{category.name}</option>
 ))}
 </select>
 
