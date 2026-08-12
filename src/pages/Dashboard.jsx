@@ -32,6 +32,7 @@ const handleDeleteHabit = async (habitId) => {
                         {habit.title}
                         </h1>
                     </header>
+                    <button onClick={() => handleDeleteHabit(habit._id)}>Delete</button>
                 </div>
             ))}
         </section>
