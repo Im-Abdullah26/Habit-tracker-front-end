@@ -15,8 +15,8 @@ const handleChange = (event) => {
 
 const handleSubmit = (event) => {
     event.preventDefault()
-    console.log('formData', formData)
-  }
+    props.handleAddHabit(formData)
+}
 
 return (
  <main className='card'>
