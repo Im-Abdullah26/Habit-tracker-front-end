@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { index } from '../services/categories'
 
 const HabitForm = (props) => {
   const initialState = {
@@ -7,6 +8,16 @@ const HabitForm = (props) => {
   }
 const [formData, setFormData] = useState(initialState)
 const [categories, setCategories] = useState([])
+
+ useEffect(() => {
+    const fetchCategories = async () => {
+    const categoriesData =  await index()
+        setCategories(categoriesData)
+}
+fetchCategories()
+        
+}, [])
+
 
 const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value })
