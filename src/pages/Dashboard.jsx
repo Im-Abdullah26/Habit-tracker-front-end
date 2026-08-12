@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { index } from '../services/habits'
+import { index, deleteHabit } from '../services/habits'
 
 const Dashboard = (props) => {
 
@@ -13,6 +13,11 @@ const Dashboard = (props) => {
         fetchHabits()
         
     }, [])
+
+const handleDeleteHabit = async (habitId) => {
+  const deletedHabit = await deleteHabit(habitId)
+  setAllHabits(allHabits.filter((habit) => habit._id !== deletedHabit._id))
+}
 
     return (
         <section>
