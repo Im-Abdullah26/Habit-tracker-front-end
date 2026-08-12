@@ -14,6 +14,15 @@ const Categories = (props) => {
     <Link className="Edit" to="/categories/new">Create your first category</Link>
 </div>
 )}
+{categories.map((category) => (
+    <div className="card" key={category._id}>
+    <header>
+    <h1 className="categoryh1">{category.name}</h1>
+    <p className="p1" style={{ backgroundColor: category.color }}>
+    {category.color}</p>
+</header>
+</div>
+      ))}
 </section>
   )
 }
