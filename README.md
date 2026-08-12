@@ -8,8 +8,8 @@ Habitum is a simple, calm habit-tracking web app. It helps you build daily routi
 ## Getting Started
 
 - **Deployed app:** <link to deployed app>
-- **Planning materials:** <link[ to Trello board / wireframes / ERD](https://trello.com/b/mcE6uUHA)>
-- **Back-end repository:** <link[ to back-end GitHub repo](https://github.com/Im-Abdullah26/Habit-tracker-back-end)>
+- **Planning materials:** [ to Trello board / wireframes / ERD](https://trello.com/b/mcE6uUHA)
+- **Back-end repository:** [ to back-end GitHub repo](https://github.com/Im-Abdullah26/Habit-tracker-back-end)
 
 ## Technologies Used
 
